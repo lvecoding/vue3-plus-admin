@@ -1,0 +1,108 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="icon" href="/src/assets/icons/svg/github.svg" />
+    <title>Vue3PlusAdmin</title>
+    <style>
+      html,
+      body,
+      #app {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE 和 Edge */
+      }
+
+      /* 隐藏 WebKit 浏览器的滚动条 */
+      html::-webkit-scrollbar,
+      body::-webkit-scrollbar {
+        display: none;
+      }
+      .chromeframe {
+        margin: 0.2em 0;
+        background: #ccc;
+        color: #000;
+        padding: 0.2em 0;
+      }
+      #loader-wrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 6em;
+        box-sizing: border-box;
+        transition: all 0.2s;
+      }
+      .loading-logo {
+        width: 30%;
+      }
+      .loading-text {
+        letter-spacing: 0.6em;
+        margin-left: 1.4em;
+        margin-top: -1.2em;
+        color: #333;
+        font-size: 1.6em;
+        font-weight: 500;
+      }
+      .mobile-loading-text {
+        letter-spacing: 0.6em;
+        margin-left: 1.4em;
+        margin-top: -0.4em;
+        color: #333;
+        font-size: 1em !important;
+        font-weight: 500;
+      }
+      .mobile-loading-logo {
+        width: 50%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="loader-wrapper">
+        <span class="loading-text">加载中…</span>
+      </div>
+    </div>
+    <script>
+      const loadingText = document.querySelector('.loading-text')
+      const loadingLogo = document.querySelector('.loading-logo')
+
+      // 封装检测函数
+      function checkScreenSize() {
+        const width = window.innerWidth
+        console.log('当前屏幕宽度:', width)
+
+        if (width <= 1024) {
+          loadingText?.classList.add('mobile-loading-text')
+          loadingLogo?.classList.add('mobile-loading-logo')
+        } else {
+          loadingText?.classList.remove('mobile-loading-text')
+          loadingLogo?.classList.remove('mobile-loading-logo')
+        }
+      }
+
+      // 初始检测
+      checkScreenSize()
+
+      // 使用防抖优化resize事件
+      let resizeTimer
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer)
+        resizeTimer = setTimeout(checkScreenSize, 100)
+      })
+    </script>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

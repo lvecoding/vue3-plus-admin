@@ -1,0 +1,37 @@
+export default {
+  translation: {
+    首页: 'Home',
+    系统管理: 'System Management',
+    用户管理: 'User Management',
+    角色管理: 'Role Management',
+    菜单管理: 'Menu Management',
+    部门管理: 'Department Management',
+    字典管理: 'Dictionary Management',
+    岗位管理: 'Post Management',
+    参数管理: 'Parameter Management',
+    通知公告: 'Notification and Announcement',
+    日志管理: 'Log Management',
+    操作日志: 'Operation Log',
+    登录日志: 'Login Log',
+
+    用户名称: 'User Name',
+    请输入用户名称: 'Please enter the user name',
+    手机号码: 'Mobile Phone Number',
+    请输入手机号码: 'Please enter the mobile phone number',
+    状态: 'Status',
+    请选择状态: 'Please select the status',
+    创建时间: 'Creation Time',
+    开始日期: 'Start Date',
+    结束日期: 'End Date',
+    搜索: 'Search',
+    重置: 'Reset',
+    新增: 'Add',
+    修改: 'Modify',
+    删除: 'Delete',
+    用户编号: 'User Number',
+    用户昵称: 'User Nickname',
+    部门: 'Department',
+    操作: 'Operation',
+    请输入部门名称: 'Please enter the department name'
+  }
+}

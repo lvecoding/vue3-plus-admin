@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="12px" height="13px" viewBox="0 0 12 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>arrowLine</title>
+    <g id="官网" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
+        <g id="2" transform="translate(-973.000000, -3829.000000)" stroke="#FFFFFF" stroke-width="2.5">
+            <g id="arrowRight" transform="translate(974.441681, 3811.015485)">
+                <path d="M9,19.2970376 L2.5,19.2970376 M9,29.2970376 L2.5,29.2970376 M9,24.2970376 L0,24.2970376" id="arrowLine"></path>
+            </g>
+        </g>
+    </g>
+</svg>

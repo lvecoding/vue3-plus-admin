@@ -1,0 +1,116 @@
+/* HTML: <div class="loader"></div> */
+.animate-text-loading {
+  width: 6px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  animation: l5 1s infinite linear alternate;
+}
+
+@keyframes l5 {
+  0% {
+    box-shadow:
+      10px 0 #000,
+      -10px 0 #0002;
+    background: #000;
+  }
+  33% {
+    box-shadow:
+      10px 0 #000,
+      -10px 0 #0002;
+    background: #0002;
+  }
+  66% {
+    box-shadow:
+      10px 0 #0002,
+      -10px 0 #000;
+    background: #0002;
+  }
+  100% {
+    box-shadow:
+      10px 0 #0002,
+      -10px 0 #000;
+    background: #000;
+  }
+}
+
+@keyframes shakerx {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(20px, -20px, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(-20px, 20px, 0);
+  }
+}
+.animate__shake_x {
+  animation-name: shakerx;
+  transform-origin: center bottom;
+  animation-iteration-count: infinite;
+  animation-duration: 40s;
+  animation-fill-mode: both;
+}
+
+@keyframes shakex {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-20px, -20px);
+    transform: translate3d(-20px, -20px, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(20px, 20px, 0);
+  }
+}
+.animate__shake_rx {
+  animation-name: shakex;
+  transform-origin: center bottom;
+  animation-iteration-count: infinite;
+  animation-duration: 40s;
+}
+
+@keyframes wurenji {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate3d(-10px, -10px);
+    transform: translate3d(-10px, -10px, 0);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate3d(10px, 10px, 0);
+  }
+}
+.animate__wurenji {
+  animation-name: wurenji;
+  transform-origin: center bottom;
+  animation-iteration-count: infinite;
+  animation-duration: 40s;
+  animation-fill-mode: both;
+}
